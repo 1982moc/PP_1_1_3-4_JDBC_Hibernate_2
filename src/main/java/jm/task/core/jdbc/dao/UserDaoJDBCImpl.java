@@ -14,6 +14,7 @@ public class UserDaoJDBCImpl implements UserDao {
         this.connection = Util.getConnection();
     }
 
+    @Override
     public void createUsersTable() {
         try (Statement statement = connection.createStatement()) {
             String query = "CREATE TABLE IF NOT EXISTS users " +

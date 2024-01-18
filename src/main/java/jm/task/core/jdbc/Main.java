@@ -5,15 +5,15 @@ import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userService = new UserServiceImpl();
+       final UserService userService = new UserServiceImpl();
 
         // Создание таблицы User(ов)
         userService.createUsersTable();
 
         // Добавление 4 User(ов) в таблицу
-        userService.saveUser("John", "Doe", (byte) 25);
-        userService.saveUser("Jane", "Smith", (byte) 30);
-        userService.saveUser("Bob", "Johnson", (byte) 22);
+        userService.saveUser("Валико", "Мизандари", (byte) 35);
+        userService.saveUser("Рубен", "Хачикян", (byte) 30);
+        userService.saveUser("Лариса", "Ивановна", (byte) 22);
         userService.saveUser("Alice", "Williams", (byte) 28);
 
         // Получение всех User из базы и вывод в консоль
@@ -21,11 +21,11 @@ public class Main {
         userService.getAllUsers().forEach(System.out::println);
 
         // Очистка таблицы User(ов)
-        System.out.println("Таблица очищена");
+        System.out.println("Таблица очищена.");
         userService.cleanUsersTable();
 
         // Удаление таблицы User(ов)
-        System.out.println("Таблица удалена");
+        System.out.println("Таблица удалена.");
         userService.dropUsersTable();
     }
 }
