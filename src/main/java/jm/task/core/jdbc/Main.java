@@ -13,10 +13,10 @@ public class Main {
         userDao.createUsersTable();
 
         // Добавление 4 User(ов) в таблицу
-        userDao.saveUser("Валико", "Мизандари", (byte) 35);
-        userDao.saveUser("Рубен", "Хачикян", (byte) 30);
-        userDao.saveUser("Лариса", "Ивановна", (byte) 22);
-        userDao.saveUser("Alice", "Williams", (byte) 28);
+        userDao.saveUser("Вако", "Мизандари", (byte) 35);
+        userDao.saveUser("Рун", "Хачикян", (byte) 30);
+        userDao.saveUser("Ласа", "Ивановна", (byte) 22);
+        userDao.saveUser("Ale", "Williams", (byte) 28);
 
         // Получение всех User из базы и вывод в консоль
        System.out.println("Список всех пользователей:");
